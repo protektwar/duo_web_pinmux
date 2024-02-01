@@ -18,5 +18,5 @@ Then open Browser on address of the development board port 8080
 
 Screenshot
 
-
+![Web duo pin multiplexer configurator](https://github.com/protektwar/duo_web_pinmux/blob/main/duo_web_pinmux_server_screenshot.png?raw=true)
 
