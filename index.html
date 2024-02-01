@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>
+Web DUO pin multiplexing configuration
+</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+function setElementById(variable,value) { 
+  var s = document.getElementById(variable);
+  var v = document.getElementById(value).value;
+  s.value = v; }
+function submitMe(form) { var s = document.getElementById(form); s.submit(); }
+</script>
+</head>
+<body>
+<center><h1> Web DUO Pin multiplexing contigurator </h1></center>
+<form id="form" action="" method="POST">
+<input type="hidden" id="changeMe" name="toChange" value="">
+</form>
+<table><tr>
+<td id="td_left" style="vertical-align: top;">
+<select name="GP0" id="pinout_GP0" onchange="setElementById('changeMe', 'pinout_GP0');submitMe('form');">
+<option value="GP0-JTAG_TDI">JTAG_TDI</option>
+<option value="GP0-UART1_TX">UART1_TX</option>
+<option value="GP0-UART2_TX">UART2_TX</option>
+<option value="GP0-GP0">GP0</option>
+<option value="GP0-IIC0_SCL" selected>IIC0_SCL</option>
+<option value="GP0-WG0_D0">WG0_D0</option>
+<option value="GP0-DBG_10">DBG_10</option>
+</select>
+<br>
+<select name="GP1" id="pinout_GP1" onchange="setElementById('changeMe', 'pinout_GP1');submitMe('form');">
+<option value="GP1-JTAG_TDO">JTAG_TDO</option>
+<option value="GP1-UART1_RX">UART1_RX</option>
+<option value="GP1-UART2_RX">UART2_RX</option>
+<option value="GP1-GP1">GP1</option>
+<option value="GP1-IIC0_SDA" selected>IIC0_SDA</option>
+<option value="GP1-WG0_D1">WG0_D1</option>
+<option value="GP1-WG1_D0">WG1_D0</option>
+<option value="GP1-DBG_11">DBG_11</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP2" id="pinout_GP2" onchange="setElementById('changeMe', 'pinout_GP2');submitMe('form');">
+<option value="GP2-UART4_TX" selected>UART4_TX</option>
+<option value="GP2-GP2">GP2</option>
+<option value="GP2-PWM_10">PWM_10</option>
+</select>
+<br>
+<select name="GP3" id="pinout_GP3" onchange="setElementById('changeMe', 'pinout_GP3');submitMe('form');">
+<option value="GP3-UART4_RX" selected>UART4_RX</option>
+<option value="GP3-GP3">GP3</option>
+<option value="GP3-PWM_11">PWM_11</option>
+</select>
+<br>
+<select name="GP4" id="pinout_GP4" onchange="setElementById('changeMe', 'pinout_GP4');submitMe('form');">
+<option value="GP4-PWR_SD1_D2">PWR_SD1_D2</option>
+<option value="GP4-IIC1_SCL">IIC1_SCL</option>
+<option value="GP4-UART2_TX">UART2_TX</option>
+<option value="GP4-GP4">GP4</option>
+<option value="GP4-CAM_MCLK0">CAM_MCLK0</option>
+<option value="GP4-UART3_TX">UART3_TX</option>
+<option value="GP4-PWR_SPINOR1_HOLD_X">PWR_SPINOR1_HOLD_X</option>
+<option value="GP4-PWM_5" selected>PWM_5</option>
+</select>
+<br>
+<select name="GP5" id="pinout_GP5" onchange="setElementById('changeMe', 'pinout_GP5');submitMe('form');">
+<option value="GP5-PWR_SD1_D1">PWR_SD1_D1</option>
+<option value="GP5-IIC1_SDA">IIC1_SDA</option>
+<option value="GP5-UART2_RX">UART2_RX</option>
+<option value="GP5-GP5">GP5</option>
+<option value="GP5-CAM_MCLK1">CAM_MCLK1</option>
+<option value="GP5-UART3_RX">UART3_RX</option>
+<option value="GP5-PWR_SPINOR1_WP_X">PWR_SPINOR1_WP_X</option>
+<option value="GP5-PWM_6" selected>PWM_6</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP6" id="pinout_GP6" onchange="setElementById('changeMe', 'pinout_GP6');submitMe('form');">
+<option value="GP6-PWR_SD1_CLK">PWR_SD1_CLK</option>
+<option value="GP6-SPI2_SCK" selected>SPI2_SCK</option>
+<option value="GP6-IIC3_SDA">IIC3_SDA</option>
+<option value="GP6-GP6">GP6</option>
+<option value="GP6-CAM_HS0">CAM_HS0</option>
+<option value="GP6-EPHY_SPD_LED">EPHY_SPD_LED</option>
+<option value="GP6-PWR_SPINOR1_SCK">PWR_SPINOR1_SCK</option>
+<option value="GP6-PWM_9">PWM_9</option>
+</select>
+<br>
+<select name="GP7" id="pinout_GP7" onchange="setElementById('changeMe', 'pinout_GP7');submitMe('form');">
+<option value="GP7-PWR_SD1_CMD">PWR_SD1_CMD</option>
+<option value="GP7-SPI2_SDO" selected>SPI2_SDO</option>
+<option value="GP7-IIC3_SCL">IIC3_SCL</option>
+<option value="GP7-GP7">GP7</option>
+<option value="GP7-CAM_VS0">CAM_VS0</option>
+<option value="GP7-EPHY_LNK_LED">EPHY_LNK_LED</option>
+<option value="GP7-PWR_SPINOR1_MOSI">PWR_SPINOR1_MOSI</option>
+<option value="GP7-PWM_8">PWM_8</option>
+</select>
+<br>
+<select name="GP8" id="pinout_GP8" onchange="setElementById('changeMe', 'pinout_GP8');submitMe('form');">
+<option value="GP8-PWR_SD1_D0">PWR_SD1_D0</option>
+<option value="GP8-SPI2_SDI" selected>SPI2_SDI</option>
+<option value="GP8-IIC1_SDA">IIC1_SDA</option>
+<option value="GP8-GP8">GP8</option>
+<option value="GP8-CAM_MCLK1">CAM_MCLK1</option>
+<option value="GP8-UART3_RTS">UART3_RTS</option>
+<option value="GP8-PWR_SPINOR1_MISO">PWR_SPINOR1_MISO</option>
+<option value="GP8-PWM_7">PWM_7</option>
+</select>
+<br>
+<select name="GP9" id="pinout_GP9" onchange="setElementById('changeMe', 'pinout_GP9');submitMe('form');">
+<option value="GP9-PWR_SD1_D3">PWR_SD1_D3</option>
+<option value="GP9-SPI2_CS_X" selected>SPI2_CS_X</option>
+<option value="GP9-IIC1_SCL">IIC1_SCL</option>
+<option value="GP9-GP9">GP9</option>
+<option value="GP9-CAM_MCLK0">CAM_MCLK0</option>
+<option value="GP9-UART3_CTS">UART3_CTS</option>
+<option value="GP9-PWR_SPINOR1_CS_X">PWR_SPINOR1_CS_X</option>
+<option value="GP9-PWM_4">PWM_4</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP10" id="pinout_GP10" onchange="setElementById('changeMe', 'pinout_GP10');submitMe('form');">
+<option value="GP10-VI0_D_6">VI0_D_6</option>
+<option value="GP10-GP10">GP10</option>
+<option value="GP10-IIC1_SDA" selected>IIC1_SDA</option>
+<option value="GP10-KEY_ROW2">KEY_ROW2</option>
+<option value="GP10-DBG_9">DBG_9</option>
+</select>
+<br>
+<select name="GP11" id="pinout_GP11" onchange="setElementById('changeMe', 'pinout_GP11');submitMe('form');">
+<option value="GP11-VI0_D_7">VI0_D_7</option>
+<option value="GP11-GP11">GP11</option>
+<option value="GP11-IIC1_SCL" selected>IIC1_SCL</option>
+<option value="GP11-CAM_MCLK1">CAM_MCLK1</option>
+<option value="GP11-DBG_10">DBG_10</option>
+</select>
+<br>
+<select name="GP12" id="pinout_GP12" onchange="setElementById('changeMe', 'pinout_GP12');submitMe('form');">
+<option value="GP12-UART0_TX" selected>UART0_TX</option>
+<option value="GP12-CAM_MCLK1">CAM_MCLK1</option>
+<option value="GP12-PWM_4">PWM_4</option>
+<option value="GP12-GP12">GP12</option>
+<option value="GP12-UART1_TX">UART1_TX</option>
+<option value="GP12-AUX1">AUX1</option>
+<option value="GP12-JTAG_TMS">JTAG_TMS</option>
+<option value="GP12-DBG_6">DBG_6</option>
+</select>
+<br>
+<select name="GP13" id="pinout_GP13" onchange="setElementById('changeMe', 'pinout_GP13');submitMe('form');">
+<option value="GP13-UART0_RX" selected>UART0_RX</option>
+<option value="GP13-CAM_MCLK0">CAM_MCLK0</option>
+<option value="GP13-PWM_5">PWM_5</option>
+<option value="GP13-GP13">GP13</option>
+<option value="GP13-UART1_RX">UART1_RX</option>
+<option value="GP13-AUX0">AUX0</option>
+<option value="GP13-JTAG_TCK">JTAG_TCK</option>
+<option value="GP13-DBG_7">DBG_7</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP14" id="pinout_GP14" onchange="setElementById('changeMe', 'pinout_GP14');submitMe('form');">
+<option value="GP14-SDIO0_PWR_EN">SDIO0_PWR_EN</option>
+<option value="GP14-GP14" selected>GP14</option>
+</select>
+<br>
+<select name="GP15" id="pinout_GP15" disabled>
+<option value="GP15-GP15" selected>GP15</option>
+</select>
+</td><td><img align=center src="duo_pinout_small.png"></td>
+<td id="td_right" style="vertical-align: top;">
+<select name="VBUS" id="pinout" disabled>
+<option value="VBUS" selected>VBUS</option>
+</select>
+<br>
+<select name="VSYS" id="pinout" disabled>
+<option value="VSYS" selected>VSYS</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="3V3_EN" id="pinout" disabled>
+<option value="3V3_EN" selected>3V3_EN</option>
+</select>
+<br>
+<select name="3V3(OUT)" id="pinout" disabled>
+<option value="3V3(OUT)" selected>3V3(OUT)</option>
+</select>
+<br>
+<select name="-" id="pinout" disabled>
+<option value="-" selected>-</option>
+</select>
+<br>
+<select name="-" id="pinout" disabled>
+<option value="-" selected>-</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP27" id="pinout_GP27" onchange="setElementById('changeMe', 'pinout_GP27');submitMe('form');">
+<option value="GP27-USB_VBUS_DET">USB_VBUS_DET</option>
+<option value="GP27-GP27" selected>GP27</option>
+<option value="GP27-CAM_MCLK0">CAM_MCLK0</option>
+<option value="GP27-CAM_MCLK1">CAM_MCLK1</option>
+<option value="GP27-PWM_4">PWM_4</option>
+</select>
+<br>
+<select name="GP26" id="pinout_GP26" onchange="setElementById('changeMe', 'pinout_GP26');submitMe('form');">
+<option value="GP26-GP26" selected>GP26</option>
+<option value="GP26-KEY_COL2">KEY_COL2</option>
+<option value="GP26-PWM_3">PWM_3</option>
+</select>
+<br>
+<select name="RUN" id="pinout" disabled>
+<option value="RUN" selected>RUN</option>
+</select>
+<br>
+<select name="GP22" id="pinout_GP22" onchange="setElementById('changeMe', 'pinout_GP22');submitMe('form');">
+<option value="GP22-PWR_SEQ2">PWR_SEQ2</option>
+<option value="GP22-GP22" selected>GP22</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP21" id="pinout_GP21" onchange="setElementById('changeMe', 'pinout_GP21');submitMe('form');">
+<option value="GP21-SPINOR_HOLD_X">SPINOR_HOLD_X</option>
+<option value="GP21-SPINAND_HOLD">SPINAND_HOLD</option>
+<option value="GP21-GP21" selected>GP21</option>
+</select>
+<br>
+<select name="GP20" id="pinout_GP20" onchange="setElementById('changeMe', 'pinout_GP20');submitMe('form');">
+<option value="GP20-SPINOR_WP_X">SPINOR_WP_X</option>
+<option value="GP20-SPINAND_WP">SPINAND_WP</option>
+<option value="GP20-GP20" selected>GP20</option>
+</select>
+<br>
+<select name="GP19" id="pinout_GP19" onchange="setElementById('changeMe', 'pinout_GP19');submitMe('form');">
+<option value="GP19-SPINOR_MOSI">SPINOR_MOSI</option>
+<option value="GP19-SPINAND_MOSI">SPINAND_MOSI</option>
+<option value="GP19-GP19" selected>GP19</option>
+</select>
+<br>
+<select name="GP18" id="pinout_GP18" onchange="setElementById('changeMe', 'pinout_GP18');submitMe('form');">
+<option value="GP18-SPINOR_SCK">SPINOR_SCK</option>
+<option value="GP18-SPINAND_CLK">SPINAND_CLK</option>
+<option value="GP18-GP18" selected>GP18</option>
+</select>
+<br>
+<select name="GND" id="pinout" disabled>
+<option value="GND" selected>GND</option>
+</select>
+<br>
+<select name="GP17" id="pinout_GP17" onchange="setElementById('changeMe', 'pinout_GP17');submitMe('form');">
+<option value="GP17-SPINOR_CS_X">SPINOR_CS_X</option>
+<option value="GP17-SPINAND_CS">SPINAND_CS</option>
+<option value="GP17-GP17" selected>GP17</option>
+</select>
+<br>
+<select name="GP16" id="pinout_GP16" onchange="setElementById('changeMe', 'pinout_GP16');submitMe('form');">
+<option value="GP16-SPINOR_MISO">SPINOR_MISO</option>
+<option value="GP16-SPINAND_MISO">SPINAND_MISO</option>
+<option value="GP16-GP16" selected>GP16</option>
+</select>
+</td></tr></table>
+</body>
+</head>
+</html>
